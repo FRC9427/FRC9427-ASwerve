@@ -19,7 +19,7 @@
       "id": 55,
       "canbus": null
     },
-    "absoluteEncoderInverted": true,
+    "absoluteEncoderInverted": false,
     "inverted": {
       "drive": false,
       "angle": false
