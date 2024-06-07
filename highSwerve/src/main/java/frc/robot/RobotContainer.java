@@ -63,9 +63,9 @@ public class RobotContainer {
         // 左搖桿控制平移
         // 右搖桿控制機器人的角速度
         Command driveFieldOrientedAnglularVelocity = drivebase.driveCommand(
-                () -> MathUtil.applyDeadband(driverXbox.getLeftY(), OperatorConstants.LEFT_Y_DEADBAND),
-                () -> MathUtil.applyDeadband(driverXbox.getLeftX(), OperatorConstants.LEFT_X_DEADBAND),
-                () -> driverXbox.getRightX() * 0.5);
+                () -> -MathUtil.applyDeadband(driverXbox.getLeftY(), OperatorConstants.LEFT_Y_DEADBAND),
+                () -> -MathUtil.applyDeadband(driverXbox.getLeftX(), OperatorConstants.LEFT_X_DEADBAND),
+                () -> -driverXbox.getRightX());
 
         Command driveFieldOrientedDirectAngleSim = drivebase.simDriveCommand(
                 () -> MathUtil.applyDeadband(driverXbox.getLeftY(), OperatorConstants.LEFT_Y_DEADBAND),
